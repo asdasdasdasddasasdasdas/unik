@@ -1,0 +1,132 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="logo">
+
+            <img src="images/airplane.png" alt="" class="logo-img">
+            <span class="logo-title">IATU</span>
+        </div>
+        <nav class="nav">
+            <ul class="navbar">
+                <li class="navbar-menu__item"><a href="" class="navbar-menu__link">О нас</a></li>
+                <li class="navbar-menu__item"><a href="" class="navbar-menu__link">Главная</a></li>
+                <li class="navbar-menu__item"><a href="" class="navbar-menu__link">Расписание</a></li>
+            </ul>
+        </nav>
+
+        <div class="burger"><span class="burger-span"></span></div>
+    </header>
+    <section class="about-us">
+        <div class="about-us__content">
+            <h1 class="about-us__title">ИАТУ</h1>
+            <h3 class="about-us__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A animi, architecto
+                aspernatur dicta, et impedit ipsam laudantium maiores nam repudiandae tempore, veritatis voluptate
+                voluptates
+            </h3>
+        </div>
+    </section>
+    <section class="advantages">
+        <div class="advantages__title">
+            <h1 class="advantages__title-text title">Преимущества</h1>
+        </div>
+        <div class="advantages__content">
+            <div class="advantages__item advantages__item-1 fade fade-left">
+                <img src="images/background.jpg" alt="" class="advantages__item-image">
+                <p class="advantages__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt
+                    facilis fuga qui veniam! Aliquam doloribus placeat provident soluta. Dicta, nam?</p>
+            </div>
+            <div class="advantages__item advantages__item-2 fade fade-right">
+                <img src="images/background.jpg" alt="" class="advantages__item-image">
+                <p class="advantages__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque,
+                    commodi consequatur ducimus earum et excepturi inventore molestias nemo officia qui?</p>
+            </div>
+            <div class="advantages__item advantages__item-3 fade fade-left">
+                <img src="images/background.jpg" alt="" class="advantages__item-image">
+                <p class="advantages__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at
+                    commodi, excepturi fugiat in iste omnis repellendus sequi tempore totam?</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="education">
+
+        <div class="education__header">
+            <h1 class="education__header-text">Программа обучения</h1>
+        </div>
+        <div class="education__content">
+
+            <div class="education__item">
+                <div class="education__item-header">
+                    <h3 class="education__item-title">Самолето- и вертолетостроение</h3>
+                </div>
+                <div class="education__picture"><img src="images/airplane-black.png" alt="" class="education__picture-img"></div>
+                <p class="education__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ipsam odit sed voluptatem. Architecto aut dignissimos nesciunt, pariatur porro sequi.</p>
+            </div>
+            <div class="education__item">
+                <div class="education__item-header">
+                    <h3 class="education__item-title">Экономика</h3>
+                </div>
+                <div class="education__picture"><img src="images/economics.png" alt="" class="education__picture-img"></div>
+                <p class="education__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores aut corporis dolorum ea laudantium nam quas velit. Nisi, porro.</p>
+            </div>
+            <div class="education__item">
+                <div class="education__item-header">
+                    <h3 class="education__item-title">Менеджмент</h3>
+                </div>
+                <div class="education__picture"><img src="images/managment.png" alt="" class="education__picture-img"></div>
+                <p class="education__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A commodi illo inventore necessitatibus, nihil non recusandae saepe sunt veniam voluptatum.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+
+        <div class="footer__response">
+            <p class="footer__response-text">
+               <span class="light">13.09.2021</span> Loremipsum@awdwda.com
+            </p>
+            <p class="footer__response-text">
+               <span class="light">13.09.2021</span> Loremasd@ramp.com
+            </p>
+            <p class="footer__response-text">
+               <span class="light">13.09.2021</span> Lorem@ssss.com
+            </p>
+        </div>
+    </section>
+</div>
+
+
+<script>
+
+    let menu = document.getElementsByClassName("burger")
+    menu.item(0).addEventListener("click", (e) => {
+
+        document.getElementsByClassName("burger-span").item(0).classList.toggle("burger-span_active")
+        document.getElementsByClassName("navbar").item(0).classList.toggle("navbar_active")
+    })
+    let fade_in = document.getElementsByClassName("advantages__item");
+
+    window.addEventListener("scroll", ev => {
+        for (let el of fade_in) {
+            console.log()
+            if ((el.getBoundingClientRect().y - window.outerHeight + el.offsetHeight) < 0) {
+                if (el.classList.contains("fade")) el.classList.toggle("fade")
+                if (el.classList.contains("fade-left")) el.classList.toggle("fade-left")
+                if (el.classList.contains("fade-right")) el.classList.toggle("fade-right")
+            }
+        }
+
+
+    })
+</script>
+</body>
+</html>
